@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     //setting up various variables
     public int level { get; set; }
     public int state { get; set; }
-
     public int heatBarCurrent { get; set; }
 
 }
