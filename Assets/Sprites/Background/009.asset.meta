@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7c4fb42dde02674e903d63d8e3f2350
+guid: 85c554fdcb10d25408721bd254c20815
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
@@ -11,5 +11,5 @@ AssetOrigin:
   productId: 298433
   packageName: Rectangle World Tiles - Free
   packageVersion: 1.0
-  assetPath: Assets/Sprites/Background/008.asset
+  assetPath: Assets/Rectangle World Tiles - Free/Tiles/009.asset
   uploadId: 698260
