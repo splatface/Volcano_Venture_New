@@ -2,7 +2,20 @@ using UnityEngine;
 
 public class dragon : MonoBehaviour
 {
-    public float speed = 10f;
+    [SerializeField]
+    public float moveForce = 10f;
+
+    [SerializeField]
+    public float jumpForce = 11f;
+
+    private float movementX;
+
+    private Rigidbody2D dragonBody;
+    private SpriteRenderer sr;
+    private Animator anim;
+    private string WALK_ANIMATION = "Walk";
+
+    public float speed = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
