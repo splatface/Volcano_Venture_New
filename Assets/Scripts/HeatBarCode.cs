@@ -20,7 +20,7 @@ public class HeatBarCode : MonoBehaviour
     // updates the heatbar so it decreases every frame
     void Update()
     {
-        heatBar.value -= 0.05f;
+        heatBar.value -= 0.03f;
 
         // checks if heatbar is empty and resets the level
         if (heatBar.value <= 0)
