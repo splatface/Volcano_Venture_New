@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class dragon : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class dragon : MonoBehaviour
 
     public float speed = 3f;
 
+    public Slider heatBar;
+
     void Start()
     {
         dragonBody = GetComponent<Rigidbody2D>();
@@ -43,9 +46,7 @@ public class dragon : MonoBehaviour
         DragonJump();
 
 
-        // TALK ABOUT HEAT BAR WITH TIFFANY TMR
-        heat += heatIncreaseRate * Time.deltaTime;
-        if (heat >= 20f)
+        if (heatBar.value <= 0)
         {
             ResetDragon();
         }
