@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23892aca57fe10647b71601ad04c11c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCollision
+  heatBar: {fileID: 401579402}
 --- !u!212 &15644102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2837,6 +2838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23892aca57fe10647b71601ad04c11c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCollision
+  heatBar: {fileID: 401579402}
 --- !u!212 &1860890940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3042,6 +3044,7 @@ MonoBehaviour:
   jumpForce: 11
   heatIncreaseRate: 1
   speed: 5
+  heatBar: {fileID: 401579402}
 --- !u!212 &1905325397
 SpriteRenderer:
   m_ObjectHideFlags: 0

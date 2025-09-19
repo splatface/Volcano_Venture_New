@@ -23,7 +23,6 @@ public class dragon : MonoBehaviour
     private string OBSTACLE_TAG = "Obstacle";
 
     private Vector2 startPosition = new Vector2(7.37f, 0.04f);
-    private float heat = 0f;
     public float heatIncreaseRate = 1f;
 
     public float speed = 3f;
@@ -102,7 +101,6 @@ public class dragon : MonoBehaviour
     private void ResetDragon()
     {
         transform.position = startPosition;
-        heat = 0f;
     }
 
 }
