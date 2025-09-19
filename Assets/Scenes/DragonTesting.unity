@@ -291,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::dragon
   moveForce: 10
   jumpForce: 11
+  heatIncreaseRate: 1
   speed: 5
 --- !u!212 &1049606067
 SpriteRenderer:
@@ -359,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 1049606065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.05, y: -0.5941591, z: 0}
+  m_LocalPosition: {x: 7.77, y: -1.73, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,7 +473,7 @@ GameObject:
   - component: {fileID: 1681164850}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class dragon : MonoBehaviour
@@ -14,28 +16,39 @@ public class dragon : MonoBehaviour
     private Animator anim;
     private string WALK_ANIMATION = "Walk";
 
+    private bool isGrounded;
+    private string GROUND_TAG = "Ground";
+
+    private string OBSTACLE_TAG = "Obstacles";
+
+    private Vector2 startPosition = new Vector2(7.77f, -1.73f);
+    private float heat = 0f;
+    public float heatIncreaseRate = 1f;
+
     public float speed = 5f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         dragonBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
         sr = GetComponent<SpriteRenderer>();
+        dragonBody.gravityScale = 4.5f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         DragonMoveKeyboard();
         AnimateDragon();
         DragonJump();
-    }
 
-    private void FixedUpdate()
-    {
-        DragonJump();
+
+        // TALK ABOUT HEAT BAR WITH TIFFANY TMR
+        heat += heatIncreaseRate * Time.deltaTime;
+        if (heat >= 20f)
+        {
+            ResetDragon();
+        }
     }
 
     void DragonMoveKeyboard()
@@ -64,10 +77,31 @@ public class dragon : MonoBehaviour
 
     void DragonJump()
     {
-        if (Input.GetButtonDown("Jump"))
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
         {
+            isGrounded = false;
             dragonBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(GROUND_TAG))
+        {
+            isGrounded = true;
+        }
+
+        // HAVE TO MAKE OBSTACLE TAGS ON SELENAS CODE THAT'S ALL!!!
+        if (collision.gameObject.CompareTag(OBSTACLE_TAG))
+        {
+            ResetDragon();
+        }
+    }
+
+    private void ResetDragon()
+    {
+        transform.position = startPosition;
+        heat = 0f;
     }
 
 }
