@@ -4,12 +4,12 @@ public class IceCollision : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (collision.gameObject.name == "dragon_idle_0")
+        if (other.gameObject.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
