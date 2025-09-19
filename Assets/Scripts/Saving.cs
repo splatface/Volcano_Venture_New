@@ -37,6 +37,7 @@ public class Saving
         string saveContent = File.ReadAllText(SFileName());
 
         _saveData = JsonUtility.FromJson<SaveToFileFunc>(saveContent);
+        HandleLoadData();
     }
 
     private static void HandleLoadData()

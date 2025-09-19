@@ -77,16 +77,15 @@ public class GameManager : MonoBehaviour
         level = data.currentLevel;
     }
 
-    public Text savingIcon;
 
     private void Update()
     {
-        if (Keyboard.current.leftCtrlKey.isPressed) // saves when presses left ctrl key
+        if (Input.GetKeyDown(KeyCode.LeftControl)) // saves when presses left ctrl key
         {
             Saving.Save();
         }
 
-        if (Keyboard.current.rightCtrlKey.isPressed) // only for testing purposes as will load on start up later on
+        if (Input.GetKeyDown(KeyCode.LeftControl)) // only for testing purposes as will load on start up later on
         {
             Saving.Load();
         }
