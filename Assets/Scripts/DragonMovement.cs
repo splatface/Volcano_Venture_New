@@ -19,13 +19,13 @@ public class dragon : MonoBehaviour
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
 
-    private string OBSTACLE_TAG = "Obstacles";
+    private string OBSTACLE_TAG = "Obstacle";
 
-    private Vector2 startPosition = new Vector2(7.77f, -1.73f);
+    private Vector2 startPosition = new Vector2(7.37f, 0.04f);
     private float heat = 0f;
     public float heatIncreaseRate = 1f;
 
-    public float speed = 5f;
+    public float speed = 3f;
 
     void Start()
     {
