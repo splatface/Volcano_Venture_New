@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeatBarCode : MonoBehaviour
 {
@@ -20,6 +21,13 @@ public class HeatBarCode : MonoBehaviour
     void Update()
     {
         heatBar.value -= 0.05f;
+
+        // checks if heatbar is empty and resets the level
+        if (heatBar.value <= 0)
+        {
+            heatBar.value = heatBar.maxValue;
+            SceneManager.LoadScene(sceneName: "Volcano");
+        }
     }
 
 }
