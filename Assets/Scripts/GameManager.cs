@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
             Saving.Save();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl)) // only for testing purposes as will load on start up later on
+        if (Input.GetKeyDown(KeyCode.RightControl)) // only for testing purposes as will load on start up later on
         {
             Saving.Load();
         }
